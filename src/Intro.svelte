@@ -16,7 +16,7 @@
         <span>How quickly can your mouse find the ${cookie}cheese</span> hidden in the ${napkin}grid?</span>
         ${ul}
         ${li}${napkin}Mice</span> mark either the ${cookie}cheese</span> or a ${toast}mouse trap</span>.</li>
-        ${li}Click on a ${napkin}mouse</span> if you think you know  where the ${cookie}cheese</span> is. Otherwise, click on an empty cell.</li>
+        ${li}Click on a ${napkin}mouse</span> if you think that's  where the ${cookie}cheese</span> is. Otherwise, click on an empty cell.</li>
         ${li}${toast}Traps</span> may move with each click, but the ${cookie}cheese</span> stays in the same spot.</li>
         </ul>`;
 
@@ -82,7 +82,7 @@
         font-size: 22px;
         display: grid;
         align-content: start;
-        width: 330px;
+        width: 335px;
         filter: drop-shadow(0 2px 3px black);
     }
 

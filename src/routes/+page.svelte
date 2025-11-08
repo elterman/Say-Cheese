@@ -1,7 +1,7 @@
 <script>
-    import Cookie from '$lib/images/Cookie.webp';
-    import Hmm from '$lib/images/Hmm.webp';
-    import Trap from '$lib/images/Trap.webp';
+    import Cheese from '$lib/images/Cheese.webp';
+    import Think from '$lib/images/Think.webp';
+    import Trap from '$lib/images/Trap Intro.webp';
     import Frame from '$lib/images/Frame.webp';
     import GamePage from '../Game Page.svelte';
     import Intro from '../Intro.svelte';
@@ -58,9 +58,9 @@
         <div class="content" style="scale: {scale};">
             <img class="frame" src={Frame} alt="" />
             {#if ss.intro}
-                <img class="flag" src={Trap} alt="" width={300} transition:fade={{ duration: 100 }} />
-                <img class="coin" src={Cookie} alt="" width={110} transition:fade={{ duration: 100 }} />
-                <img class="death" src={Hmm} alt="" width={110} transition:fade={{ duration: 100 }} />
+                <img class="trap" src={Trap} alt="" width={300} transition:fade={{ duration: 100 }} />
+                <img class="cheese" src={Cheese} alt="" width={110} transition:fade={{ duration: 100 }} />
+                <img class="death" src={Think} alt="" width={110} transition:fade={{ duration: 100 }} />
             {/if}
             <GamePage />
             <Intro />
@@ -160,14 +160,14 @@
         touch-action: none;
     }
 
-    .flag {
+    .trap {
         grid-area: 1/1;
         touch-action: none;
         place-self: center;
-        filter: drop-shadow(0 0 10px black) opacity(0.2) grayscale(1);
+        filter: drop-shadow(0 0 10px black) opacity(0.15) grayscale(1);
     }
 
-    .coin {
+    .cheese {
         grid-area: 1/1;
         touch-action: none;
         justify-self: end;

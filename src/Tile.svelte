@@ -1,7 +1,9 @@
 <script>
-    import Coin from '$lib/images/Coin.webp';
-    import Trap from '$lib/images/Death.webp';
-    import Flag from '$lib/images/Flag.webp';
+    import Won from '$lib/images/Won.webp';
+    import Trap from '$lib/images/Trap.webp';
+    import Cheese from '$lib/images/Cheese.webp';
+    import Death from '$lib/images/Death.webp';
+    import Think from '$lib/images/Think.webp';
     import BlackPlate from '$lib/images/Plate Black.webp';
     import WhitePlate from '$lib/images/Plate White.webp';
     import Plate from '$lib/images/Plate.webp';
@@ -22,10 +24,10 @@
     const trap = $derived(ss.over && item === TRAP);
     const dim = $derived(ss.size + MIN_GAME_DIMENSION - 1);
     const width = $derived(BOARD_SIZE / dim);
-    const flagSize = $derived(width / 1.8);
-    const coinSize = $derived(width / 1.4);
-    const trapSize = $derived(width / 1.2);
     const sel = $derived(ss.over && ss.selected && samePos(ss.selected, tile));
+    const flagSize = $derived(width / 1.8);
+    const coinSize = $derived(width / 1.8);
+    const trapSize = $derived(width / (sel && trap ? 1.2 : 1.5));
     let pressed = $state();
     let _this = $state();
     let flip = $derived(ss.flip ? sample(['flip-x', 'flip-y']) : '');
@@ -76,7 +78,7 @@
     {#if !ss.paused || ss.over}
         <div class="content-wrapper" transition:scale={{ opacity: 1 }}>
             {#snippet content(img, sz, dy = 0)}
-                {@const filter = `drop-shadow(0 0 ${sz / 10}px black) saturate(${sel && trap ? 2 : 1})`}
+                {@const filter = `drop-shadow(0 0 ${sz / 10}px black)`}
                 <div
                     class="content {coin && ss.over === WON ? 'pulse' : ''}" style='transform: translateY({dy}%);'
                     transition:scale={{ duration: ss.over ? 400 : 100, opacity: 1 }}>
@@ -84,13 +86,13 @@
                 </div>
             {/snippet}
             {#if coin}
-                {@render content(Coin, coinSize, -3)}
+                {@render content(ss.over === WON ? Won : Cheese, coinSize, -3)}
             {/if}
             {#if trap}
-                {@render content(Trap, trapSize, -2)}
+                {@render content(sel && trap ? Death : Trap, trapSize, -2)}
             {/if}
             {#if flag}
-                {@render content(Flag, flagSize)}
+                {@render content(Think, flagSize)}
             {/if}
         </div>
     {/if}
