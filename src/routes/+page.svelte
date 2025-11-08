@@ -85,11 +85,12 @@
             color: var(--ow);
             background: var(--background);
             font-family: Cooper;
+            cursor: url('$lib/images/Mouse Cursor Gray.png'), auto;
         }
 
         .button-base {
             box-sizing: border-box;
-            cursor: pointer;
+            cursor: url('$lib/images/Mouse Cursor.png'), auto;
             display: grid;
             place-content: center;
             transition: transform 0.1s;

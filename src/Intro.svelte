@@ -13,11 +13,11 @@
     const toast = '<span class="toast" style="filter: brightness(1.7) saturate(1.2)">';
 
     const CONTENT = `
-        <span>How quickly can your mouse find the ${cookie}cheese</span> hidden in the ${napkin}grid?</span>
+        <span>How quickly can your mouse sniff out the hidden ${cookie}cheese</span>?</span>
         ${ul}
-        ${li}${napkin}Mice</span> mark either the ${cookie}cheese</span> or a ${toast}mouse trap</span>.</li>
-        ${li}Click on a ${napkin}mouse</span> if you think that's  where the ${cookie}cheese</span> is. Otherwise, click on an empty cell.</li>
-        ${li}${toast}Traps</span> may move with each click, but the ${cookie}cheese</span> stays in the same spot.</li>
+        ${li}Each ${napkin}mouse</span> marks either the ${cookie}cheese</span> or a ${toast} trap</span>.</li>
+        ${li}Click a ${napkin}mouse</span> if you think it hides the ${cookie}cheese</span>. Otherwise, click an empty cell.</li>
+        ${li}${toast}Traps</span> may shift with each click—but the ${cookie}cheese never moves</span>.</li>
         </ul>`;
 
     const resume = $derived(ss.ticks);

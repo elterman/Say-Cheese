@@ -27,13 +27,13 @@
     const classes = `button-base no-highlight button ${op.label === CHEER_TOAST ? 'toast' : 'cookie'} ${op.label === CHEER_TOAST ? 'saturate' : ''} ${op.onClick ? '' : 'ro'}`;
 </script>
 
-<div id={op.label} class={classes} style='transform: scale({scale});' onpointerdown={() => (scale = 0.8)}>
+<div id={op.label} class={classes} style="transform: scale({scale});" onpointerdown={() => (scale = 0.8)}>
     <span style={op.style}>{op.label}</span>
 </div>
 
 <style>
     .button {
-        cursor: pointer;
+        cursor: url('$lib/images/Mouse Cursor.png'), auto;
         filter: drop-shadow(0 2px 5px black);
     }
 

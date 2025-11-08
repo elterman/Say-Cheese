@@ -80,7 +80,8 @@
             {#snippet content(img, sz, dy = 0)}
                 {@const filter = `drop-shadow(0 0 ${sz / 20}px #0007)`}
                 <div
-                    class="content {coin && ss.over === WON ? 'pulse' : ''}" style='transform: translateY({dy}%);'
+                    class="content {coin && ss.over === WON ? 'pulse' : ''}"
+                    style="transform: translateY({dy}%);"
                     transition:scale={{ duration: ss.over ? 400 : 100, opacity: 1 }}>
                     <img src={img} alt="" width={sz} style="filter: {filter};" />
                 </div>
@@ -104,7 +105,7 @@
         box-sizing: border-box;
         /* border: 1px solid #ffffff60; */
         padding: 2.3%;
-        cursor: pointer;
+        cursor: url('$lib/images/Mouse Cursor.png'), auto;
         transition:
             scale 0.1s,
             transform 0.5s ease-out;
