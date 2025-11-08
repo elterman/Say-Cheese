@@ -78,8 +78,8 @@
             margin: 0;
             overflow: hidden;
             --ow: #c6c7be;
-            --gold: #daa520;
-            --red: #a52a2a;
+            --gold: #f6c960;
+            --rose: #d8978e;
             --orange: #ff7900;
             --background: #604020;
             color: var(--ow);

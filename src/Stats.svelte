@@ -35,7 +35,7 @@
         place-content: center;
         gap: 10px;
         border-radius: 50vh;
-        color: gold;
+        color: var(--gold);
         filter: drop-shadow(0 1px 2px black);
     }
 
@@ -50,7 +50,7 @@
     }
 
     .label {
-        color: var(--red);
+        color: var(--rose);
     }
 
     .plays {
