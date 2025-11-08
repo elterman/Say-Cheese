@@ -71,7 +71,7 @@
 <div
     {id}
     bind:this={_this}
-    class="tile no-highlight {ss.paused || ss.over ? 'ro' : ''} {pressed ? 'pressed' : ''} {ss.over === LOST ? 'shake' : ''} {flip}"
+    class="tile no-highlight {ss.paused || ss.over ? 'ro' : ''} {pressed ? 'pressed' : ''} {ss.over === LOST ? 'shake_' : ''} {flip}"
     style="grid-area: {area}; width: {width}px; height: {width}px;"
     onpointerdown={onPointerDown}>
     <img class="plate" src={ss.over && coin ? WhitePlate : sel && trap ? BlackPlate : Plate} alt="" width="100%" height="100%" />
@@ -80,7 +80,7 @@
             {#snippet content(img, sz, dy = 0)}
                 {@const filter = `drop-shadow(0 0 ${sz / 10}px black)`}
                 <div
-                    class="content {coin && ss.over === WON ? 'pulse' : ''}" style='transform: translateY({dy}%);'
+                    class="content {coin && ss.over === WON ? 'pulse_' : ''}" style='transform: translateY({dy}%);'
                     transition:scale={{ duration: ss.over ? 400 : 100, opacity: 1 }}>
                     <img src={img} alt="" width={sz} style="filter: {filter};" />
                 </div>

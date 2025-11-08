@@ -59,7 +59,7 @@
             <img class="frame" src={Frame} alt="" />
             {#if ss.intro}
                 <img class="trap" src={Trap} alt="" width={300} transition:fade={{ duration: 100 }} />
-                <img class="cheese" src={Cheese} alt="" width={110} transition:fade={{ duration: 100 }} />
+                <img class="cheese" src={Cheese} alt="" width={100} transition:fade={{ duration: 100 }} />
                 <img class="death" src={Think} alt="" width={110} transition:fade={{ duration: 100 }} />
             {/if}
             <GamePage />
@@ -79,7 +79,7 @@
             overflow: hidden;
             --ow: #c6c7be;
             --gold: #f6c960;
-            --rose: #d8978e;
+            --rose: #c59a88;
             --red: #d10000;
             --background: #604020;
             color: var(--ow);
