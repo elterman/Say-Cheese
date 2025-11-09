@@ -112,17 +112,12 @@
             background-image: url('$lib/images/Cookie Texture.webp');
         }
 
-        .napkin {
-            background-image: url('$lib/images/Napkin Texture.webp');
-        }
-
         .toast {
             background-image: url('$lib/images/Toast Texture.webp');
             filter: brightness(1.7);
         }
 
         .cookie,
-        .napkin,
         .toast {
             background-clip: text;
             -webkit-background-clip: text; /* For broader browser compatibility */
@@ -157,13 +152,6 @@
     .frame {
         grid-area: 1/1;
         touch-action: none;
-    }
-
-    .trap {
-        grid-area: 1/1;
-        touch-action: none;
-        place-self: center;
-        filter: drop-shadow(0 0 10px black) opacity(0.15) grayscale(1);
     }
 
     .cheese {

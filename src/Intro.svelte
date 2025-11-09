@@ -10,14 +10,14 @@
     const li = '<li style="margin: 10px 0 0 -20px;">';
     const cookie = '<span class="cookie">';
     const napkin = '<span class="cookie">';
-    const toast = '<span class="toast" style="filter: brightness(1.7) saturate(1.2)">';
+    const toast = '<span style="color: #ff2e51;">';
 
     const CONTENT = `
         <span>How quickly can your mouse sniff out the hidden ${cookie}cheese</span>?</span>
         ${ul}
         ${li}Each ${napkin}mouse</span> marks either the ${cookie}cheese</span> or a ${toast} trap</span>.</li>
         ${li}Click a ${napkin}mouse</span> if you think it hides the ${cookie}cheese</span>. Otherwise, click an empty cell.</li>
-        ${li}${toast}Traps</span> may shift with each click—but the ${cookie}cheese never moves</span>.</li>
+        ${li}${toast}Traps</span> may ${toast}shift</span> with each click—but the ${cookie}cheese never moves</span>.</li>
         </ul>`;
 
     const resume = $derived(ss.ticks);
@@ -45,7 +45,8 @@
 {#if ss.intro}
     <div class="intro" in:fade>
         <div class="title-panel">
-            <span class="title cookie">SAY CHEESE!</span>
+            <span class="title cookie">THE CHEESE</span>
+            <span class="title cookie">NEVER MOVES</span>
         </div>
         <div class="content" tabindex="-1">
             <!-- eslint-disable-next-line svelte/no-at-html-tags -->
@@ -74,7 +75,7 @@
     }
 
     .title {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .content {
